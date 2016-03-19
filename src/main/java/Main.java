@@ -1,4 +1,4 @@
-package edu.uniandes.ecos.ase.app;
+
 
 import edu.uniandes.ecos.ase.calculo.CalculoEstadistica;
 import edu.uniandes.ecos.ase.dto.ResultadoDTO;
@@ -8,7 +8,6 @@ import java.util.List;
 
 import static spark.Spark.*;
 import static spark.Spark.get;
-import static spark.Spark.get;
 /**
  * Hello world!
  *
@@ -17,6 +16,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        port(Integer.valueOf(System.getenv("PORT")));
+        staticFileLocation("/public");
+        
         get("/rangoDesviacionEstandar", (req, res) -> {
             
             List<String> datosLocMethod = new ArrayList<String>();
