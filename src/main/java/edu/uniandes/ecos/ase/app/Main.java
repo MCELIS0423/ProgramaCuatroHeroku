@@ -8,11 +8,12 @@ import java.util.List;
 
 import static spark.Spark.*;
 import static spark.Spark.get;
+import static spark.Spark.get;
 /**
  * Hello world!
  *
  */
-public class App {
+public class Main {
 
     public static void main(String[] args) {
 
