@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class CalculoEstadistica implements ICalculoEstadistica {
 
+    @Override
     public Double normalizarValor(String valorUno, String valorDos) {
         Double cociente = null;
         try {
@@ -29,6 +30,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
      * @return La sumatoria de todos los números ingresados como parámetros a
      * través de una lista
      */
+    @Override
     public Double sumatoria(List<String> datos) {
         double sumatoria = 0;
         try {
@@ -47,6 +49,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
      * @return El promedio de todos los números ingresados como parámetros a
      * través de una lista
      */
+    @Override
     public Double promedioLogaritmoNatural(List<String> datos) {
         Integer numeroRegistros;
         Double media = null;
@@ -66,6 +69,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return media;
     }
 
+    @Override
     public Double varianza(List<String> datos, double promedioLogaritmoNatural) {
         Integer numeroRegistros;
         double sumatoria = 0;
@@ -85,6 +89,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return varianza;
     }
 
+    @Override
     public Double desviacionEstandar(Double varianza) {
         Double desviacionEstandar = null;
         try {
@@ -95,6 +100,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return desviacionEstandar;
     }
 
+    @Override
     public Double verySmall(double promedioLogaritmoNatural, double desviacionEstandar) {
         Double vs = null;
         try {
@@ -105,6 +111,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return vs;
     }
 
+    @Override
     public Double small(double promedioLogaritmoNatural, double desviacionEstandar) {
         Double s = null;
         try {
@@ -115,6 +122,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return s;
     }
 
+    @Override
     public Double medium(double promedioLogaritmoNatural) {
         Double m = null;
         try {
@@ -125,6 +133,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return m;
     }
 
+    @Override
     public Double large(double promedioLogaritmoNatural, double desviacionEstandar) {
         Double l = null;
         try {
@@ -135,6 +144,7 @@ public class CalculoEstadistica implements ICalculoEstadistica {
         return l;
     }
 
+    @Override
     public Double veryLarge(double promedioLogaritmoNatural, double desviacionEstandar) {
         Double vl = null;
         try {
